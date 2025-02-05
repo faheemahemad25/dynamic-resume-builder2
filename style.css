@@ -1,0 +1,766 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* 
+   ----------------------------
+   Utilities Class start
+   ----------------------------
+    
+ */
+:root{
+    --white: #ffffff;     /* main document */
+    --gray: gray;          /* gray*/
+    --gray-light: #d3d3d3; /* gray light*/  /* FAQ answere #d3d3d3 is rgb(211 211 211)*/ 
+    --warm-white:#f2f2f2;   /* too-light-gray*/ /* FAQ answere*/ 
+    --ghost-white:#f9f9f9;  /* toomuch-light-gray */ /* FAQ wrapper*/ 
+
+    
+     /* ========== Text color idea =========== */
+
+    /* 1. Blue color combination  */
+    /* 2. grayBlue color combination  */
+
+    /* Blue color combination for Text*/
+    --blue-dark:#1d69a3;        /* footer menu text */ 
+    --blue-light-color:#2294ed; /* footer menu text hover */ 
+
+    /* SlateBlue color combination for Text */
+    --too-dark-slate-Blue:#183b56;
+    --dark-slate-Blue:#435971;
+    --light-slate-Blue:#566A7F;        
+
+
+    /* ========== background color idea =========== */
+
+    /* 1. gray color combination  */
+    /* 2. grayBlue color combination  */
+
+    /* Gray color combination for  background*/
+    --toomuch-light-gray:#f9f9f9; /* FAQ question bg */ 
+    --light-gray:#f2f2f2;         /* FAQ answere bg */ 
+
+    /* Gray-Blue color combination for  background*/
+    --toomuch-light-gray-blue:#EBF2FA;         /* footer color */  
+    --light-gray-blue:#B9CDE4;                 /* sub footer color */  
+    
+ }
+
+ .br{
+    border: 2px solid red;
+ }
+ .bg{
+     border: 2px solid green;
+  }
+  .bb{
+     border: 2px solid blue;
+  }
+  .gradient-border{
+    border-image: -webkit-linear-gradient(332deg, #cb20e9 -15.2%, #FD7521 66.64%) 1;
+   border-width: 2px;   /*📗🔖NOTE: without this property border-image not show*/   
+   
+   border-radius: 5px; 
+  }
+
+ /* 
+   ----------------------------
+   Utilities Class end 
+   ----------------------------
+    
+ */
+
+ /* ==================== header ======================= */
+
+ nav ul li a{
+    /* transition: all 0.4s ease; */
+}
+
+nav ul li a:hover{
+    /* color: var(--dark-slate-Blue); */
+}
+
+.activeNav{
+    background-color: rgba(211, 211, 211, 0.347);
+    /* color: var(--dark-slate-Blue); */
+    /* border-radius: 5px; */
+    /* padding: 5px; */
+    /* list-style: none; */
+}
+
+ /*📗🔖 liner-gradient cant appy direct with baground and color */
+ .gradient-Icons-clr {
+    background: linear-gradient(#e4c134, #ff5acd); /* Define the gradient */
+    background-clip: text; /* Clip the background to the text */
+    -webkit-text-fill-color: transparent; /*Make the text transparent to reveal the background */
+}
+
+
+.primary-btnDsgn {
+    /* REMEMBER ---------- 📗🔖 gradient's color text is created by 3 css property. where as simple text color is created by 1 proprty. for simple text color-> ❌color:red; ----------  */ 
+    background: linear-gradient(332deg, #cb20e9 -15.2%, #FD7521 66.64%);
+    background-clip: text; /* Clip the background to the text 📗🔖 liner-gradient for text not work direct it work with extra  property background-clip, text-fill-color */
+    -webkit-text-fill-color: transparent; /*Make the text transparent to reveal the background */
+ 
+    /*  REMEMBER---------- gradient's color border is created by via 2 peoprty. where as simple border is created by 1 proprty. for simple color border-> ❌border 2px red;  ----------  */
+    border-image: -webkit-linear-gradient(332deg, #cb20e9 -15.2%, #FD7521 66.64%) 1;  /*📗🔖 Browser-Specific Prefixes bcz advace css use with specifi browser target it is 100% ok but was not working . */ 
+    border-width: 2px;  /*📗🔖NOTE: without this property border-image not show*/
+
+    border-radius: 5px;  /*NOTEEEEEEEEEEEEEEEEEEEEEEEEE: border-radius not working simpliy with css gradient? */
+}
+
+
+.primary-btnDsgn:hover {
+    background: linear-gradient(332deg, #E92085 -11.2%, #FD7521 66.64%); 
+    /* background-clip: text; Clip the background to the text 📗🔖 liner-gradient for text not work direct it work with extra  property background-clip, text-fill-color */
+    -webkit-text-fill-color: var(--ghost-white); /*Make the text transparent to reveal the background */
+    /* color: var(--ghost-white);      📗🔖  color not work for text color so use text-fill-color */
+}
+
+
+
+/* ==================== hero section ======================= */
+
+.heroSection{
+    background-image: url(assests/zbarib.ai-herobg.png);  
+}
+
+/*  ------------ hero left  ------------  */
+.gradient-Txt-clr2{
+    background: -webkit-linear-gradient(330deg, #cb20e9 15.2%, #FD7521 66.64%);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.SecondaryBtnDsgn{
+    background: linear-gradient(332deg, #cb20e9 -15.2%, #FD7521 66.64%);
+    color: var(--ghost-white);
+    width: 15rem;
+    text-align: center;
+   /*  ---------- gradient border is created via 2 css property. ----------  */
+   border-image: -webkit-linear-gradient(332deg, #cb20e9 -15.2%, #FD7521 66.64%) 1;
+   border-width: 2px;   /*📗🔖NOTE: without this property border-image not show*/   
+   
+   border-radius: 5px;  /*NOTEEEEEEEEEEEEEEEEEEEEEEEEE: border-radius not working simpliy with css gradient? */
+}
+.SecondaryBtnDsgn:hover{
+    box-shadow: 0px 0px 10px 0px salmon;  
+}
+
+.SecondaryBtnDsgn:active{
+    transform: scale(0.9);
+}
+
+/*  ------------ hero right  ------------  */
+.card{
+    transition: all 1s linear;
+    transform-style: preserve-3d; /*📗🔖NOTE: without this property child doesnt rotate in 3d look and it work with backface-visibility: hidden; */
+    
+    
+    animation-name: autoFlip; 
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    /* animation-timing-function: linear;  */
+    /* transform feel slow ☝️👆if u remove it JHATKA and 1se push feel animation-timing-function: linear */
+}
+.card:hover,
+.card-back{
+
+    transform: rotateY(180deg);
+
+}
+
+.card-front{
+    backface-visibility: hidden; /*📗🔖NOTE: without this property child doesnt rotate in 3d look and it work with transform-style: preserve-3d */
+}
+
+.card-back{
+    
+    backface-visibility: hidden; /*📗🔖NOTE: without this property child doesnt rotate in 3d look and it work with transform-style: preserve-3d*/
+}
+
+@keyframes autoFlip {
+    0%{
+       transform: translateY(-5%); /* from top toward down*/
+       /* transform */
+    }
+    20%{
+        transform: translateX(15%);  /* toward right*/
+    }
+    50%{
+       
+       transform: rotateY(180deg);
+       
+    }
+    75%{
+        transform: translateX(20%); /* to left*/
+    }
+    100%{
+       transform: translateY(1%); /* to down*/
+    }
+ }
+
+
+
+/* ==================== Companies Slider section  ======================= */
+
+.font-Rubik{
+    /*🔖 from bydefault it is littel large,little bold,little curve the edge of text */
+    font-family: "Rubik", sans-serif;
+}
+
+
+.slider-Container{
+    /* 👇📗🔖 just width: calc(250px * 14);  we can not see our empty space or full umtill fill so benefit of min-width */
+    /* min-width show/retains its calculated/defined  width even without enough content inside it still show all width.*/
+    min-width: calc(220px * 14);
+    
+    /* animation on this div */
+    animation-name: slideScrl;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+.slider-Container img{
+    filter: grayscale(100%);
+}
+
+/* .slider-Container img:hover{
+    filter: grayscale(0%);
+} */
+
+.slider-Container:hover{
+    animation-play-state: paused;
+}
+
+@keyframes slideScrl{
+    from{
+        transform: translateX(0%);
+    }
+    to{
+        /* transform: translateX(-50%); */
+        /* or */
+        transform: translateX(calc(-220px * 7)); 
+        
+    }
+}
+
+
+
+/* ============ Resume Templates Slider section ============*/
+
+.templatesSlider-container{
+    /* background:url(assests/herobg-shine.png) ; */
+    /* background-size: cover; */
+    /* background-position:left; */
+    /* background-repeat: no-repeat ; */
+
+    /* background: -webkit-linear-gradient( #cb20e906 -15.2%, #fd752107 66.64%); */
+
+    background: url(assests/bg-gradient-center.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    /* background-size: 600px 500px;  */
+    /* background-color: rebeccapurple; */
+}
+.templatesDesign-wrapper{
+    /* width: 80vw; */
+    /* border: 2px solid blueviolet; */
+    display: flex;
+    gap: 20px;
+    padding-block: 5px;
+    overflow-x: scroll; 
+    /* ☝️📗🔖The scrollbar appears Always  horizontally, regardless of whether the content overflows or not. */
+    /*  VS */
+    /* overflow-x: auto; */
+    /* ☝️📗🔖The scrollbar appears only when the content overflows horizontally. */
+    scroll-behavior: smooth; /* 👈📗🔖 alternate of transition when work with scroll slider. */
+    /* transition: all 1s ease; */
+    
+}
+.templatesDesign-wrapper div {
+    /* border: 2px solid red; */
+    box-shadow: 0px 0px 5px rgb(211, 211, 211);
+    width: calc(25% - 20px);
+    height: 500px;
+    flex: none; /* ☝️📗🔖 it apply in children when they shrink bcz of flex by default behaviour. AFTER use of it every children comes with its original size or 25% or what we defined. */
+   
+    border-radius: 5px;
+    background-color: white;
+}
+.templatesDesign-wrapper div:hover{
+    /* border: 2px solid rgb(211, 211, 211); */
+    border-image: -webkit-linear-gradient(332deg, #cb20e9 -15.2%, #FD7521 66.64%) 1;  /*📗🔖 Browser-Specific Prefixes bcz advace css use with specifi browser target it is 100% ok but was not working . */ 
+    border-width: 2px;  /*📗🔖NOTE: without this property border-image not show*/
+}
+.templatesDesign-wrapper div img{
+    /* width: 100%;
+    height: 100%;
+    object-fit: contain; */
+    /* display: none; */
+
+}
+.templatesDesign-wrapper::-webkit-scrollbar{
+    display: none;
+}
+
+
+
+/* ============ Testimonial section ============  */
+
+.testimonial-reviewed{
+    background: url(assests/bg-right.png);
+    background-repeat: no-repeat;
+    background-position: right;
+    /* background-size: contain; */
+    background-size: 600px 500px; 
+    
+}
+.review-Card {
+    /* visibility: visible; */
+    box-shadow: 0px 0px 5px 0px rgb(211, 211, 211);
+    transform:scale(0.8);
+    /* transform: translateX(-10px); */
+    /* transform: translateY(-15px); */
+    transition: transform 1s ease;
+    
+  }
+.active {
+    transform: scale(1); 
+    /* transform: translateX(10px); */
+    /* transform: translateY(15px); */
+  }
+
+
+.testimonial-reviewed {
+    /* border: 2px solid red; */
+    /* background:url(assests/lines.jpeg) ; */
+    /* background: url(assests/bg-left.png);
+    background-repeat: no-repeat; */
+    /* background-position: center; */
+    /* background-size: cover; */
+    
+}
+
+
+
+
+
+
+
+/* ============ Template-Categories section ============ */
+
+.template-Categories-container{
+    /* background: -webkit-linear-gradient( #cb20e906 -15.2%, #fd752107 66.64%); */
+    /* background-image: url(assests/bg-right.png); */
+    /* background-repeat: no-repeat; */
+    /* background-position:bottom; */
+    /* background-size: cover; */
+
+    /* background: url(assests/bg-right.png); */
+    /* background-repeat: no-repeat; */
+    /* background-position: right; */
+    /* background-size: contain; */
+    /* background-size: 600px 500px;  */
+
+    /* background-image: url(assests/bg-grid.jpg); */
+    /* background-repeat: no-repeat; */
+    /* background-position:bottom; */
+    /* background-size: cover; */
+        
+}
+
+.templates-categories-wrapper{
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 12px;
+   
+}
+
+/* --------------------------------------------  left side --------------------------------------------  */
+
+/* item 1 */
+.templates-categories-filters {
+    /* border: 2px solid green; */
+    grid-column: span 3;
+    /* background-color: var(--ghost-white); */
+    /* background: -webkit-linear-gradient( #cb20e906 -15.2%, #fd752107 66.64%); */
+    /* background: linear-gradient(332deg, #cb20e9 -15.2%, #FD7521 66.64%); */
+    /* background-image: url(assests/zbarib.ai-herobg.png);
+    background-position: center; */
+    /* box-shadow: 0px 0px 5px 0px rgb(211, 211, 211); */
+    /* box-shadow: inset 0 0 10px rgb(211, 211, 211); */
+    /* padding: 5px; */
+
+    
+}
+
+
+.templates-categories-filters button{
+    border: 2px solid #E5E7EB;
+    transition: all 0.3s ease;
+}
+
+.templates-categories-filters button:hover{
+    /* box-shadow: 0px 0px 5px 0px rgb(211, 211, 211); */
+    border: 2px solid rgb(168, 168, 168);
+
+    /* border-image: -webkit-linear-gradient(332deg, #cb20e9 -15.2%, #FD7521 66.64%) 1;  📗🔖 Browser-Specific Prefixes bcz advace css use with specifi browser target it is 100% ok but was not working .  */
+    /* border-width: 2px;   */
+
+    /* background-color: rgba(211, 211, 211, 0.347) */
+
+   
+    
+}
+.templates-categories-filters button:active{
+    /* box-shadow: 0px 0px 5px 0px rgb(211, 211, 211); */
+    transform: scale(0.97);
+}
+button {
+  /* white-space: nowrap; */
+  /* white-space: normal; */
+   /* Allow text to wrap */
+}
+.templates-categories-filters button.active{
+    /* background-color: #404040; */
+    /* color: var(--warm-white); */
+    background-color: rgb(211, 211, 211);
+    color: black;
+    
+    
+}
+
+.templates-categories-filters button img{
+    background-color: white;
+  filter: grayscale(100%);  
+}
+
+
+/* -------------------------------------------- right side --------------------------------------------  */
+
+/* item 2 */
+.templates-categories-body{
+
+    /* border: 5px solid yellowgreen; */
+    grid-column: span 9;
+    /* background-color: var(--ghost-white); */
+    /* background: -webkit-linear-gradient( #cb20e906 -15.2%, #fd752107 66.64%); */
+    /* background-image: url(assests/zbarib.ai-herobg.png);
+    background-position: center; */
+    /* box-shadow: 0px 0px 5px 0px rgb(211, 211, 211); */
+    /* box-shadow: 0px 0px 5px 0px #404040; */
+    /* box-shadow: inset 0 0 10px rgb(211, 211, 211); */
+    /* padding: 5px; */
+}
+
+.category a:hover{
+    box-shadow: 0px 0px 5px 0px rgb(211, 211, 211);
+    border: 2px solid rgb(168, 168, 168);
+    /* border-image: -webkit-linear-gradient(332deg, #cb20e9 -15.2%, #FD7521 66.64%) 1;  📗🔖 Browser-Specific Prefixes bcz advace css use with specifi browser target it is 100% ok but was not working .  */
+    /* border-width: 2px;   */
+
+}
+
+
+
+.templates-categories-body::-webkit-scrollbar {
+    width: 8px; /* Width of the scrollbar */
+    height: 8px; /* Height of the scrollbar */
+    
+    
+}
+
+.templates-categories-body::-webkit-scrollbar-thumb {
+    background: #888; /* Color of the scrollbar thumb */
+    border-radius: 4px; /* Rounded corners */
+}
+
+.templates-categories-body::-webkit-scrollbar-thumb:hover {
+    background: #555; /* Color on hover */
+}
+
+.templates-categories-body::-webkit-scrollbar-track {
+    background: #f1f1f1; /* Background of the scrollbar track */
+    border-radius: 4px; /* Rounded corners */
+}
+
+.templates-categories-body::-webkit-scrollbar-track:hover {
+    background: #e0e0e0; /* Background on hover */
+}
+
+/* ----- filter tab ------- */
+
+.templates-categories-filters::-webkit-scrollbar {
+    width: 5px; /* Width of the scrollbar */
+    height: 5px; /* Height of the scrollbar */
+    display: none;  /*  hide scrollbar */
+}
+
+.templates-categories-filters::-webkit-scrollbar-thumb {
+    background: #888; /* Color of the scrollbar thumb */
+    border-radius: 4px; /* Rounded corners */
+}
+
+.templates-categories-filters::-webkit-scrollbar-thumb:hover {
+    background: #555; /* Color on hover */
+}
+
+.templates-categories-filters::-webkit-scrollbar-track {
+    background: #f1f1f1; /* Background of the scrollbar track */
+    border-radius: 4px; /* Rounded corners */
+}
+
+.templates-categories-filters::-webkit-scrollbar-track:hover {
+    background: #e0e0e0; /* Background on hover */
+}
+
+/* ----- each category container ------- */
+
+.category::-webkit-scrollbar {
+    width: 10px; /* Width of the scrollbar */
+    height: 5px; /* Height of the scrollbar */
+    display: none;  /*  hide scrollbar */
+}
+
+.category::-webkit-scrollbar-thumb {
+    background: #888; /* Color of the scrollbar thumb */
+    border-radius: 4px; /* Rounded corners */
+}
+
+.category::-webkit-scrollbar-thumb:hover {
+    background: #555; /* Color on hover */
+}
+
+.category::-webkit-scrollbar-track {
+    background: #f1f1f1; /* Background of the scrollbar track */
+    border-radius: 4px; /* Rounded corners */
+}
+
+.category::-webkit-scrollbar-track:hover {
+    background: #e0e0e0; /* Background on hover */
+}
+
+
+
+ /*  ============ FAQ section ============ */
+
+.FAQ-container{
+    /* background: -webkit-linear-gradient( #cb20e906 -15.2%, #fd752107 6.64%); */
+    /* background-color: #F5F7FA; */
+}
+.answere{
+    display: none;
+}
+.active{
+    display: block;
+   
+}
+.iconActive{
+    transform: rotateX(180deg);
+    /* color: green; */
+    
+    background: -webkit-linear-gradient(180deg, #cb20e9 -15.2%, #FD7521 66.64%);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+
+
+
+
+
+
+
+
+/* ============ media query ============*/
+
+/* mobile small */
+@media screen and (max-width:320px) {
+    .footer-inner-section{
+        flex-wrap: wrap;
+        gap: 0px; 
+        /* border:2px solid blue; */
+     }
+     .footer-menu{
+        width: calc(100% - 0px)!important ;
+        /* border: 2px solid red;  */
+        margin-bottom: 20px;
+    }
+    .menu-One{
+        gap: 5px;
+    }
+
+}
+
+
+/* Mobile large */
+@media screen and (max-width:768px) {
+
+
+    /* ============ Resume hero section   ============ */
+   
+    @keyframes autoFlip {
+        0%{
+           transform: translateY(-5%); /* from top toward down*/
+           /* transform */
+        }
+        20%{
+            transform: translateX(5%);  /* toward right*/
+        }
+        50%{
+           
+           transform: rotateY(180deg);
+           
+        }
+        75%{
+            transform: translateX(10%); /* to left*/
+        }
+        100%{
+           transform: translateY(1%); /* to down*/
+        }
+     }
+
+
+    /* ============ Resume companies-slider section   ============ */
+    
+    .slider-Container{
+        /* 👇📗🔖 just width: calc(250px * 14);  we can not see our empty space or full umtill fill so benefit of min-width */
+        /* min-width show/retains its calculated/defined  width even without enough content inside it still show all width.*/
+        min-width: calc(120px * 14);
+        
+        /* animation on this div */
+        animation-name: slideScrl;
+        animation-duration: 20s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+    
+    }
+    @keyframes slideScrl{
+        from{
+            transform: translateX(0%);
+        }
+        to{
+            /* transform: translateX(-50%); */
+            /* or */
+            transform: translateX(calc(-120px * 7)); 
+            
+        }
+    }
+
+    /* ============ Resume Templates-slider section : media query ============ */
+    .templatesDesign-wrapper{
+        /* width: 80vw; */
+        /* border: 2px solid blueviolet; */
+        display: flex;
+        /* gap: 20px; */
+        gap: 0px;
+        /* padding-block: 5px; */
+        /* overflow-x: scroll;  */
+        /* ☝️📗🔖The scrollbar appears Always  horizontally, regardless of whether the content overflows or not. */
+        /*  VS */
+        /* overflow-x: auto; */
+        /* ☝️📗🔖The scrollbar appears only when the content overflows horizontally. */
+        /* scroll-behavior: smooth;  */
+        /* 👈📗🔖 alternate of transition when work with scroll slider. */
+        /* transition: all 1s ease; */
+        
+    }
+    .templatesDesign-wrapper div {
+       
+        height: 400px !important; /* Enforce the height */
+        width:97%!important;
+        /* width:100%!important; */
+        /* width: calc(100%-20px) !important; */
+       /* background-color: #cb20e9; */
+       box-shadow: 0px 0px 5px gray;
+       /* padding: 2px; */
+    }
+    .templatesDesign-wrapper div img{
+       /* object-fit: fill; */
+    }
+    
+
+
+    /*  ============ Resume Testimonial section ============ ✅✅✅✅✅*/
+
+   
+
+    /* ============ Resume Template-Categories section   ============ ✅✅✅✅✅*/
+
+      /* ---- left ---- */
+    /* .templates-categories-filters button {
+        padding: 0.25rem;
+        text-align: center;
+        font-size: 8px;
+    }
+
+    .templates-categories-filters button img{
+       width: 10px;
+       height: 15px;
+    }
+
+    .templates-categories-filters button img{
+        width: 10px;
+        height: 15px;
+    }
+    .templates-categories-filters button .all-templates-icons{
+       font-size: 10px;
+    } */
+
+
+    /*  ============ FAQ section ============ ✅✅✅✅✅*/
+
+     /* .faq-container .faq-wrapper{
+        width: calc(50% - 8px);
+        word-break: break-all; 
+     } */
+
+
+     /* ============ Footer section ============ ✅✅✅✅✅ */
+
+     .footer-inner-section{
+        flex-wrap: wrap;
+        gap: 10px;
+        /* border:2px solid blue; */
+     }
+     .footer-inner-section .footer-menu{
+        width: calc(50% - 10px) ; 
+        /* border: 2px solid green ;  */
+        margin-bottom: 20px;
+    }
+    .menu-One{
+        gap: 10px;
+    }
+    
+     .footer-logo-wrapper{ 
+        display: flex;
+        flex-direction: column;
+        gap: 0px;
+           
+     }
+   
+     .footer-logo-title{
+        font-size: 20px !important;
+        overflow-wrap: break-word;
+        
+     }
+   
+     .footer-social a{
+        display: flex;
+        gap: 0px;
+       font-size: 25px;
+     }
+    
+      .menu-One-txt{
+        font-size: 14px;
+     }
+
+
+}
+
+
+
