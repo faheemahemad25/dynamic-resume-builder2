@@ -24,6 +24,20 @@ for(let card of cards){
     if(count < 0){
         count = cards.length-1;
     }
+
+  // Hide all cards initially
+for(let card of cards){
+    count = count + numb;
+    console.log(count);
+   
+    
+    if(count === cards.length){    
+      count = 0;
+    }
+
+    if(count < 0){
+        count = cards.length-1;
+    }
     
 
 
