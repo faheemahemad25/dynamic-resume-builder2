@@ -1,5 +1,5 @@
 # Dynamic Resume Builder 📄
-click to see https://resumefair.vercel.app/
+click to see https://resumefair.onrender.com
 <img src='SynonymWordsFinder.gif' >
 <img src='SynonymWordsFinder.gif' >
 
