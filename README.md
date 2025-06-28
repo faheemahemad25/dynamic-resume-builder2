@@ -20,9 +20,9 @@ click to see https://resumefair.onrender.com
  ## My Learning 📗🔖
 > First time used or real use of these
 > 
-🖊️ 1. abc <br>
-🖊️ 2. abc <br>
-🖊️ 3. abc <br>
+🖊️ 1. how to create pdf <br>
+🖊️ 2. form data into Array of Object <br>
+🖊️ 3. Dynamic rendering <br>
 
 ## Contributor 🤝
 ### Faheem Ahemad
