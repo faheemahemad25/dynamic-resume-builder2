@@ -1,7 +1,7 @@
 # Dynamic Resume Builder 📄
-click to see https://resumefair.onrender.com
-<img src='SynonymWordsFinder.gif' >
-<img src='SynonymWordsFinder.gif' >
+click to see https://resumefair.onrender.com \
+<br>
+<img src='images/resuemBulder1 (1).png'>
 
 
 ## Features 📋
